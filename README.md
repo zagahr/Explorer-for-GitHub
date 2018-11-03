@@ -61,5 +61,6 @@ At this stage please contact me before contributing code.
 ## Author
 Zagahr - [@zagahr](https://twitter.com/zagahr)
 
-## License
-`Explorer` is available under the MIT license. Some of the dependencies are licensed differently, with the BSD license, for example.
+## License / Credits
+`Explorer` is available under the MIT license. Some of the dependencies are licensed differently, with the BSD license, for example.<br>
+Icons made by [Freepik](https://www.freepik.com/) from www.flaticon.com

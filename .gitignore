@@ -10,7 +10,6 @@ node_modules/
 
 ## Configuration
 Explorer/SupportingFiles/GoogleService-Info.plist
-Explorer/SupportingFiles/Configuration.swift
 
 ## Various settings
 *.pbxuser

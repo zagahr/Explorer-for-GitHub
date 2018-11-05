@@ -1,0 +1,44 @@
+
+query Search($searchTerm: String!, $first: Int!, $after: String) {
+    search(query: $searchTerm, type: REPOSITORY, first: $first, after: $after) {
+        pageInfo {
+            endCursor
+        }
+        nodes {
+            ...Repository
+        }
+    }
+}
+
+fragment Repository on Repository {
+    id
+    owner {
+        login
+        id
+    }
+    name
+    description
+    stargazers {
+        totalCount
+    }
+    primaryLanguage {
+        name
+        color
+    }
+    forkCount
+}
+
+
+query RepositoryDetail($owner: String!, $name: String!) {
+    repository(owner: $owner, name: $name) {
+        ...RepositoryDetail
+    }
+}
+
+fragment RepositoryDetail on Repository {
+    owner {
+        login
+    }
+    description
+
+}

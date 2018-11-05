@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D6h-O4-clH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--WelcomeVC-->
+        <scene sceneID="hUO-WI-0Vf">
+            <objects>
+                <viewController id="D6h-O4-clH" customClass="WelcomeVC" customModule="Explorer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uL7-ua-Uqv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cgS-Nm-SF4">
+                                <rect key="frame" x="0.0" y="120" width="375" height="70"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="explorer" translatesAutoresizingMaskIntoConstraints="NO" id="db9-bI-ukY">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="W4p-87-SeZ"/>
+                                            <constraint firstAttribute="height" constant="70" id="ktE-BI-D3M"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explorer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="p20-Wl-XS4">
+                                        <rect key="frame" x="158" y="6" width="217" height="58.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DpS-RQ-huO">
+                                <rect key="frame" x="25" y="240" width="325" height="81.5"/>
+                                <string key="text">Explorer allows you to view trending repositories on GitHub. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium .</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="htm-iD-pos">
+                                <rect key="frame" x="25" y="512" width="325" height="55"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4BW-UH-g85">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="0Ng-Iy-neC"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Log in with Github"/>
+                                        <connections>
+                                            <action selector="didSelectLoginButton:" destination="D6h-O4-clH" eventType="touchUpInside" id="qhB-R1-C1c"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIp-ej-y1N">
+                                <rect key="frame" x="320" y="611" width="30" height="30"/>
+                                <state key="normal" title="Skip"/>
+                                <connections>
+                                    <action selector="didSelectSkipButton:" destination="D6h-O4-clH" eventType="touchUpInside" id="9Mn-bD-ZcX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cgS-Nm-SF4" firstAttribute="top" secondItem="DZn-GQ-54V" secondAttribute="top" constant="100" id="07I-JV-51v"/>
+                            <constraint firstItem="DpS-RQ-huO" firstAttribute="top" secondItem="cgS-Nm-SF4" secondAttribute="bottom" constant="50" id="Hxl-TV-Mlw"/>
+                            <constraint firstItem="DZn-GQ-54V" firstAttribute="trailing" secondItem="DpS-RQ-huO" secondAttribute="trailing" constant="25" id="NzD-sO-a7w"/>
+                            <constraint firstItem="DZn-GQ-54V" firstAttribute="trailing" secondItem="cgS-Nm-SF4" secondAttribute="trailing" id="RKc-tJ-1ah"/>
+                            <constraint firstItem="DZn-GQ-54V" firstAttribute="trailing" secondItem="htm-iD-pos" secondAttribute="trailing" constant="25" id="UZK-8j-Vnf"/>
+                            <constraint firstItem="htm-iD-pos" firstAttribute="leading" secondItem="DZn-GQ-54V" secondAttribute="leading" constant="25" id="Udp-cw-k5n"/>
+                            <constraint firstItem="DZn-GQ-54V" firstAttribute="bottom" secondItem="htm-iD-pos" secondAttribute="bottom" constant="100" id="VPS-yf-82T"/>
+                            <constraint firstItem="cgS-Nm-SF4" firstAttribute="leading" secondItem="DZn-GQ-54V" secondAttribute="leading" id="esA-iN-4wT"/>
+                            <constraint firstItem="DpS-RQ-huO" firstAttribute="leading" secondItem="DZn-GQ-54V" secondAttribute="leading" constant="25" id="hNy-ia-b8q"/>
+                            <constraint firstItem="DZn-GQ-54V" firstAttribute="trailing" secondItem="SIp-ej-y1N" secondAttribute="trailing" constant="25" id="m4C-ah-h9k"/>
+                            <constraint firstItem="DZn-GQ-54V" firstAttribute="bottom" secondItem="SIp-ej-y1N" secondAttribute="bottom" constant="26" id="pCG-do-afa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DZn-GQ-54V"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1BQ-1m-fKz"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="DpS-RQ-huO" id="DQK-br-DKg"/>
+                        <outlet property="loginButton" destination="4BW-UH-g85" id="NGd-EF-t3O"/>
+                        <outlet property="skipButton" destination="SIp-ej-y1N" id="tvv-jj-nNh"/>
+                        <outlet property="subtitleLabel" destination="DpS-RQ-huO" id="WZk-jL-o49"/>
+                        <outlet property="titleImageView" destination="db9-bI-ukY" id="Myc-Qc-6fv"/>
+                        <outlet property="titleLabel" destination="p20-Wl-XS4" id="iLy-Ua-x2N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ebV-FF-43o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="-441"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="explorer" width="512" height="362"/>
+    </resources>
+</document>

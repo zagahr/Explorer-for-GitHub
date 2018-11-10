@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3fd-wo-c5L">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TrendingVC-->
+        <scene sceneID="QbV-78-khn">
+            <objects>
+                <viewController id="3fd-wo-c5L" customClass="TrendingVC" customModule="Explorer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zY7-sW-ojt"/>
+                        <viewControllerLayoutGuide type="bottom" id="M4h-CP-nQI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WTy-tv-XRu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6H7-jt-rx2" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+                                <rect key="frame" x="0.0" y="20" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bWX-Nv-McX"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9o7-bJ-Ylw">
+                                    <size key="itemSize" width="40" height="40"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rBp-dt-i5J">
+                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rBp-dt-i5J" secondAttribute="trailing" id="3CW-27-Euu"/>
+                            <constraint firstItem="FLg-sf-daq" firstAttribute="bottom" secondItem="rBp-dt-i5J" secondAttribute="bottom" id="7xW-7w-n5b"/>
+                            <constraint firstItem="6H7-jt-rx2" firstAttribute="leading" secondItem="WTy-tv-XRu" secondAttribute="leading" id="FYX-lX-sdW"/>
+                            <constraint firstAttribute="trailing" secondItem="6H7-jt-rx2" secondAttribute="trailing" id="MpP-Oq-89g"/>
+                            <constraint firstItem="rBp-dt-i5J" firstAttribute="leading" secondItem="WTy-tv-XRu" secondAttribute="leading" id="VeH-s3-csT"/>
+                            <constraint firstItem="6H7-jt-rx2" firstAttribute="top" secondItem="FLg-sf-daq" secondAttribute="top" id="zDF-Ba-wXu"/>
+                            <constraint firstItem="rBp-dt-i5J" firstAttribute="top" secondItem="6H7-jt-rx2" secondAttribute="bottom" id="zKB-cL-NEc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FLg-sf-daq"/>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="buttonBarView" destination="6H7-jt-rx2" id="0qo-ES-IQG"/>
+                        <outlet property="containerView" destination="rBp-dt-i5J" id="l8t-SO-aOL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XAK-Ox-eDF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="638" y="-448"/>
+        </scene>
+    </scenes>
+</document>

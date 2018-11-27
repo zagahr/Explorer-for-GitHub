@@ -1,5 +1,5 @@
 <p align="center">
-    <img alt="Explorer" src="images/header.png" width="60%">
+    <img alt="Explorer" src="images/header.png" width="80%">
 </p>
 
 <p align="center">

@@ -1,0 +1,26 @@
+[
+    {
+        "title":"Most stars in {language}",
+        "query":"language:{language}"
+    },
+    {
+        "title":"Under 50 ★",
+        "query":"language:{language} stars:\"< 50\""
+    },
+    {
+        "title":"Small project seeking help",
+        "query":"language:{language} stars:\"<= 50\" help-wanted-issues:>=1"
+    },
+    {
+        "title":"Small projects perfect for beginner",
+        "query":"language:{language} stars:\"<= 50\" good-first-issues:>=1"
+    },
+    {
+        "title":"Beginner friendly projects for {language}",
+        "query":"language:{language} good-first-issues:>=5"
+    },
+    {
+        "title":"Trending programming languages",
+        "query":"language sort:stars-desc"
+    }
+]

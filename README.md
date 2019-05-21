@@ -17,6 +17,10 @@
     </a>
 </p>
 
+
+Explorer for GitHub is a native iOS application written in Swift. It enables you to view GitHub’s currently trending repositories in all programming languages and it also gives you the ability to explore repositories based on different conditions like count of stars or if the repository has issues that are beginner-friendly.
+
+
 ## Screenshots
 <br>
 
